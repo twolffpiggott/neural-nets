@@ -11,7 +11,6 @@ import keras.optimizers
 from sklearn.metrics import precision_score, recall_score, accuracy_score
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-import helpers
 
 class MLP:
     def __init__(self, input_size, output_size, **kwargs):
@@ -110,6 +109,6 @@ class MLP:
         ax.set_ylabel("precision")
         ax.set_xlim([0, 1.1])
         ax.set_ylim([0, 1.1])
-        helpers.multivac_save_graph('precision_recall_curve')
+        plt.savefig('precision_recall_curve.png', dpi=600)
         print('thresholds, precision, recall and accuracy:')
         return np.column_stack((thresholds, prec, rec, accu))
