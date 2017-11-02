@@ -17,6 +17,7 @@ prec, rec, thresh = sklearn.metrics.precision_recall_curve(data[2][1].values, pe
 ```
 
 ## Sequence to sequence LSTM
+### See [fchollet's](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html "fchollet's introduction") great introduction.
 ```python
 import helpers
 from seq_to_seq import seq2seq
